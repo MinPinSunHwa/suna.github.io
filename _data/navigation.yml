@@ -16,3 +16,11 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+
+# study links
+study:
+  - title: "Hands-On"
+    children:
+      - title: "chap 04"
+        url: /study/
