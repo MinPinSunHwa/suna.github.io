@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "**SunHwa** Ryu"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/suna-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an data scientist."
   location         : "Seoul"
   email            : "chreey3098@naver.com"
