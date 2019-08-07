@@ -279,6 +279,16 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+    
+
+# Collections
+collections:
+  study:
+    output: true
+    permalink: /:collection/:path/
+  project:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -294,3 +304,11 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _study
+  - scope:
+      path: "_study"
+      type: study
+    values:
+      layout: single
+      author_profile: true
+      comments: true
