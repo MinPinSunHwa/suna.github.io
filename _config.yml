@@ -306,7 +306,7 @@ defaults:
       related: true
   # _study
   - scope:
-      path: "_study"
+      path: ""
       type: study
     values:
       layout: single
