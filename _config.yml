@@ -316,7 +316,7 @@ defaults:
         nav: "docs"
   # _project
   - scope:
-      path: ""
+      path: "_project"
       type: project
     values:
       layout: single
