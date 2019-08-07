@@ -313,7 +313,7 @@ defaults:
       author_profile: true
       comments: true
       sidebar:
-        nav: "docs"
+        nav: "study"
   # _project
   - scope:
       path: "_project"
