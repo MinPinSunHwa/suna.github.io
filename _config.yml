@@ -312,3 +312,15 @@ defaults:
       layout: single
       author_profile: true
       comments: true
+      sidebar:
+        nav: "docs"
+  # _project
+  - scope:
+      path: ""
+      type: project
+    values:
+      layout: single
+      author_profile: true
+      comments: true
+      sidebar:
+        nav: "docs"
