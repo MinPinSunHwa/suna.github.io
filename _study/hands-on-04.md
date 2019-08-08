@@ -21,7 +21,8 @@ toc: true
 
 ## 4.1 선형 회귀
 
-- 선형 회귀 모델의 예측 <br> [4-1] <br>$$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
+- 선형 회귀 모델의 예측
+  $$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
   - $$ \hat{y} $$ : 예측값
   - $$ n $$ : 특성 수
   - $$ \theta_{0} $$ : 편향
