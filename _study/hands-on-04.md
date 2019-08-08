@@ -19,10 +19,18 @@ toc: true
 
 ## 4.1 선형 회귀
 
-- 선형 회귀 모델의 예측 <br> $$ \hat{y}=\theta_{0}x_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
+- 선형 회귀 모델의 예측 <br> $$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$ (4-1)
   - $$ \hat{y} $$ : 예측값
   - $$ n $$ : 특성 수
+  - $$ \theta_{0} $$ : 편향
   
-- 선형 회귀 모델의 예측 (벡터 형태)
+- 선형 회귀 모델의 예측 (벡터 형태) <br> $$ \hat{y}=h_\theta(\mathbf{x})=\theta^T\cdot\mathbf{x} $$ (4-2)
+  - $$ h_\theta $$ : 가설함수
+  - $$ \theta $$ : 모델의 파라미터 벡터 ($$ \theta_{0} $$ 포함)
+  - $$ \mathbf{x} $$ : 특성 벡터 ($$ x_{0} $$는 항상 1)
+  
+- 모델을 훈련시킨다는 것은 모델이 훈련 세트에 가장 잘 맞도록 모델 파라미터를 설정하는 것이다.
 
-$$ \hat{y}=h_\theta(\mathbf{x})=\theta^T\cdot\mathbf{x} $$
+- 먼저 모델이 훈련 데이터에 얼마나 잘 들어 맞는지 측정해야 한다.
+
+- 선형 회귀 모델의 MSE 비용함수 <br> $$ MSE(\mathbf{X}, h_\theta)=\frac{1}{m}\sum_{i=i}^m (\theta^T\cdot\mathbf{x}^(i) - \mathbf{y}^(i))^2 $$
