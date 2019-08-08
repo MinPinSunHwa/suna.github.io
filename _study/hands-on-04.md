@@ -15,18 +15,18 @@ toc: true
 
 - 모델을 훈련시키는 두 가지 방법을 살펴본다.
   - 직접 계산할 수 있는 공식을 사용하는 방법
-  - 경사 하강법(SD)이라 불리는 반복적인 최적화 방식을 사용하는 방법
+  - 경사 하강법(GD)이라 불리는 반복적인 최적화 방식을 사용하는 방법
 
 <br>
 
 ## 4.1 선형 회귀
 
-- 선형 회귀 모델의 예측 [4-1] <br><br> $$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
+- 선형 회귀 모델의 예측 <br> [4-1] <br>$$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
   - $$ \hat{y} $$ : 예측값
   - $$ n $$ : 특성 수
   - $$ \theta_{0} $$ : 편향
 
-- 선형 회귀 모델의 예측 (벡터 형태) [4-2] <br><br> $$ \hat{y}=h_\theta(\mathbf{x})=\theta^T\cdot\mathbf{x} $$
+- 선형 회귀 모델의 예측 (벡터 형태) <br> [4-2] <br> $$ \hat{y}=h_\theta(\mathbf{x})=\theta^T\cdot\mathbf{x} $$
   - $$ h_\theta $$ : 가설함수
   - $$ \theta=[\theta_{0}\ \theta_{1}\ \cdots\ \theta_{n}]^T $$ : 모델의 파라미터 벡터 ($$ \theta_{0} $$ 포함)
   - $$ \mathbf{x}=[x_{0}\ x_{1}\ \cdots\ x_{n}]^T $$ : 특성 벡터 ($$ x_{0} $$는 항상 1)
@@ -34,20 +34,20 @@ toc: true
 - 모델을 훈련시킨다는 것은 모델이 훈련 세트에 가장 잘 맞도록 모델 파라미터를 설정하는 것이다.
 
 - 먼저 모델이 훈련 데이터에 얼마나 잘 들어 맞는지 측정해야 한다.
-  - RMSE, MSE 2장에서 언급
+  - 회귀에 사용되는 성능 측정 지표인 RMSE, MSE는 2장에서 언급했다.
   - 비용 함수를 최소화하는 $$ \theta $$를 찾아야 한다.
 
-- 선형 회귀 모델의 MSE 비용 함수 [4-3] <br><br> $$ MSE(\mathbf{X}, h_\theta)=\frac{1}{m}\sum_{i=i}^m (\theta^T\cdot\mathbf{x}^\left(i\right) - \mathbf{y}^\left(i\right))^2 $$
+- 선형 회귀 모델의 MSE 비용 함수 <br> [4-3] <br> $$ MSE(\mathbf{X}, h_\theta)=\frac{1}{m}\sum_{i=i}^m (\theta^T\cdot\mathbf{x}^\left(i\right) - \mathbf{y}^\left(i\right))^2 $$
 
-** 4.1.1 정규방정식 **
+**4.1.1 정규방정식**
 
 - 비용함수를 최소화하는 $$ \theta $$ 값을 찾기 위해 해석적인 방법이 있다.
 
-- 정규방정식 [4-4] <br><br> $$ \hat(\theta)=(\mathbf{X}^T\cdot\mathbf{X})^{-1}\cdot\mathbf{X}^T\cdot\mathbf{y} $$
+- 정규방정식 <br> [4-4] <br> $$ \hat(\theta)=(\mathbf{X}^T\cdot\mathbf{X})^{-1}\cdot\mathbf{X}^T\cdot\mathbf{y} $$
   - $$ \hat(\theta) $$ : 비용 함수를 최소화하는 $$ \theta $$ 값
   - $$ \mathbf{y} $$ : 타깃벡터
 
-** 4.1.2 계산 복잡도 **
+**4.1.2 계산 복잡도**
 
 - 정규방정식은 역행렬을 계산한다.
   - 일반적으로 역행렬 계산 복잡도는 $$ O(n^{2.4}) $$ 에서 $$ O(n^3) $$ 사이이다.
@@ -62,3 +62,15 @@ toc: true
 <br>
 
 ## 4.2 경사 하강법
+
+- 경사 하강법(GD:Gradient Descent)은 여러 종류의 문제에서 최적의 해법을 찾을 수 있는 일반적인 최적화 알고리즘이다.
+  - 기본 아이디어는 비용 함수를 최소화하기 위해 반복해서 파라미터를 조정해가는 것이다.
+    - 파라미터 벡터 $$ \theta $$에 대해 비용 함수의 현재 그래디언트를 계산합니다.
+    - 그래디언트가 감소하는 방향으로 진행합니다.
+    - 그래디언트가 0이 되면 최솟값에 도달한 것이다.
+
+- 경사 하강법에서는 학습률(learning rate)이 중요한 하이퍼파라미터다.
+  - 스텝의 크기이다.
+  ![4-3](./image/4-3.png)
+  - 학습률이 너무 작으면 알고리즘이 수렵하기 위해 반복을 많이 진행해야 한다.
+  - 학습률이 너무 크면 알고리즘이 더 큰 값으로 발산할지도 모른다.
