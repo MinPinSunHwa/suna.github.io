@@ -11,4 +11,4 @@ chap 04. 모델 훈련
 
 - 선형 회귀 모델의 예측
 
-$$ X_{norm}=\frac{X-X_{min}}{X_{max}-X_{min}} $$
+$$ \hat{y}=\theta_{0}x_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
