@@ -20,9 +20,6 @@ layout: archive
   <section id="{{ year.name }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ page.entries_layout | default: 'list' }}">
-      <script type="text/javascript" async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-      </script>
       {% for post in year.items %}
         {% include archive-single.html type=page.entries_layout %}
       {% endfor %}
