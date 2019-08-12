@@ -111,11 +111,12 @@ toc: true
 
 - 경사 하강법을 구현하려면 각 모델 파라미터 $$ \theta_{j} $$에 대해 비용 함수의 그래디언트를 계산해야 한다.
   - $$ \theta_{j} $$가 변경될 때 비용 함수가 얼마나 바뀌는지 계산한다(편도함수).
-<br>
+<br><br>
 
 - 비용 함수의 편도함수
-  - $$ {\partial \over\partial \theta_{j}}MSE(\theta)=
-    \frac{2}{m}\sum_{i=1}^m (\theta^T\cdot\mathbf{x^\laft(i\right)}-y\left(i\right))x_j^(i) $$
+  - $$ {\partial \over\partial \theta_j}MSE(\theta)=
+    \frac{2}{m}\sum_{i=1}^m (\theta^T\cdot\mathbf{x}^\laft(i\right)-y\left(i\right))x_j^(i) $$
+<br><br>
 
 - 비용 함수의 그래디언트 벡터
   - $$ \nabla_{\theta}MSE(\theta)=
@@ -124,4 +125,12 @@ toc: true
       {\partial \over\partial \theta_1}MSE(\theta) \\
       \vdots \\
       {\partial \over\partial \theta_n}MSE(\theta)
-    \end{bmatrix} $$
+    \end{bmatrix}=
+    \frac{2}{m}\mathbf{X}^T\cdot(\mathbf{X}\cdot\theta-mathbf{y}) $$
+<br><br>
+
+- 배치 경사 하강법은 매 경사 하강법 스텝에서 전체 훈련 세트 $$ \mathbf{X} $$에 대해 계산한다.
+  - 즉, 매 스텝에서 훈련 데이터 전체를 사용한다.
+  - 따라서, 큰 훈련 세트에서는 아주 느리다.
+  - 그러나, 특성 수에 민감하지 않다.
+    - 수십만 개의 특성에서 선형 회귀를 훈련시키려면 정규방정식보다 경사 하강법을 사용하는 편이 훨씬 빠르다.
