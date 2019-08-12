@@ -114,4 +114,14 @@ toc: true
 <br>
 
 - 비용 함수의 편도함수
-  - $$ {\partial \over\partial \theta_{j}}MSE(\theta)\frac{2}{m}\sum_{i=1}^m (\theta^T\cdot\mathbf{x^\laft(i\right)}-y\left(i\right))x_{j}^(i) $$
+  - $$ {\partial \over\partial \theta_{j}}MSE(\theta)=
+    \frac{2}{m}\sum_{i=1}^m (\theta^T\cdot\mathbf{x^\laft(i\right)}-y\left(i\right))x_j^(i) $$
+
+- 비용 함수의 그래디언트 벡터
+  - $$ \nabla_{\theta}MSE(\theta)=
+    \begin{bmatrix}
+      {\partial \over\partial \theta_0}MSE(\theta) \\
+      {\partial \over\partial \theta_1}MSE(\theta) \\
+      \vdots \\
+      {\partial \over\partial \theta_n}MSE(\theta)
+    \end{bmatrix} $$
