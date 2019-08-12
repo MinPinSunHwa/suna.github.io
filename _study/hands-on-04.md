@@ -43,7 +43,7 @@ toc: true
 <br><br>
 
 - 선형 회귀 모델의 MSE 비용 함수
-  - $$ MSE(\mathbf{X}, h_\theta)=\cfrac{1}{m}\sum_{i=i}^m (\theta^T\cdot\mathbf{x}^\left(i\right) - y^\left(i\right))^2 $$
+  - $$ MSE(\mathbf{X}, h_\theta)=\cfrac{1}{m}\sum_{i=1}^m (\theta^T\cdot\mathbf{x}^\left(i\right) - y^\left(i\right))^2 $$
 <br><br>
 
 **4.1.1 정규방정식**
@@ -114,7 +114,7 @@ toc: true
 
 - 비용 함수의 편도함수
   - $$ \cfrac{\partial}{\partial \theta_j}MSE(\theta)=
-    \cfrac{2}{m}\sum_{i=1}^m (\theta^T\cdot\mathbf{x}^\laft(i\right)-y^\left(i\right))x_j^\left(i\right) $$
+    \cfrac{2}{m}\sum_{i=1}^m {(\theta^T\cdot\mathbf{x}^\laft(i\right) - y^\left(i\right))x_j^\left(i\right)} $$
 <br><br>
 
 - 비용 함수의 그래디언트 벡터
@@ -137,7 +137,7 @@ toc: true
 
 - 경사 하강법의 스텝
   - 위로 향하는 그래디언트 벡터가 구해지면 반대 방향인 아래로 가야 한다.
-  - $$ \theta^\left({next step}\right)=\theta-\eta\nabla_{\theta}MSE(\theta) $$
+  - $$ \theta^\left({next\ step}\right)=\theta-\eta\nabla_{\theta}MSE(\theta) $$
   - $$ \eta $$ : 내려가는 스텝의 크기(learning rate)
 <br><br>
 
@@ -164,8 +164,10 @@ toc: true
 <br><br>
 
 - 무작위성의 딜레마를 해결하기 위해 학습률을 점진적으로 감소시키는 방법이 있다.
-  - 시작 할 때는 학습률을 크게 하고, 점차 작게 줄여서 알고리즘이 전역 최솟값에 도달하게 한다.
+  - 시작할 때는 학습률을 크게 하고, 점차 작게 줄여서 알고리즘이 전역 최솟값에 도달하게 한다.
   - 매 반복에서 학습률을 결정하는 함수를 학습 스케줄라고 한다.
   - 학습률이 너무 빠르게 줄면 지역 최솟값에 갇히거나 최솟값까지 가는 중간에 멈출 수 있다.
   - 학습률이 너무 천천히 줄면 오랫동안 최솟값 주변을 맴돌거나 훈련을 너무 일찍 중지해서 지역 최솟값에 머물 수 있다.
 <br><br>
+
+- 한 반복에서 훈련세트의 샘플 수만큼 되풀이 될 때, 각 반복을 에포크라고 한다.
