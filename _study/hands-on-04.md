@@ -3,6 +3,7 @@ title: "Hands-On Machine Learning chap 4"
 permalink: /study/
 comments: true
 categories: [ML, HandsOn-ML]
+toc: true
 ---
 
 ## 4. 모델 훈련
