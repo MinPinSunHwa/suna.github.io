@@ -88,8 +88,10 @@ toc: true
 - 경사 하강법에서는 학습률(learning rate)이 중요한 하이퍼파라미터다. <br>
   ![4-3](images/4-3.png)
   - 학습률은 스텝의 크기이다.
-  - 학습률이 너무 작으면 알고리즘이 수렴하기 위해 반복을 많이 진행해야 한다.
-  - 학습률이 너무 크면 알고리즘이 더 큰 값으로 발산할지도 모른다.
+  - 학습률이 너무 작으면 알고리즘이 수렴하기 위해 반복을 많이 진행해야 한다. <br>
+  ![4-4](images/4-4.png)
+  - 학습률이 너무 크면 알고리즘이 더 큰 값으로 발산할지도 모른다. <br>
+  ![4-5](images/4-5.png)
 <br><br>
 
 - 경사 하강법에는 두 가지 문제점이 있다. <br>
@@ -116,8 +118,8 @@ toc: true
 <br><br>
 
 - 비용 함수의 편도함수
-  - $$ \cfrac{\partial}{\partial \theta_j}MSE(\theta)=
-    \cfrac{2}{m} \sum_{i=1}^{m} (\theta^T \cdot \mathbf{x}^\laft(i\right) - y^\left(i\right)) x_j^\left(i\right) $$
+  - $$ \cfrac{\partial}{\partial \theta_j}MSE(\theta)= $$
+    $$ \cfrac{2}{m} \sum_{i=1}^{m} (\theta^T \cdot \mathbf{x}^\laft(i\right) - y^\left(i\right)) x_j^\left(i\right) $$
 <br><br>
 
 - 비용 함수의 그래디언트 벡터
