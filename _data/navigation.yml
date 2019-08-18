@@ -2,6 +2,8 @@
 main:
   - title: "Study"
     url: /study/
+  - title: "ML"
+    url: /ml/
   - title: "Project"
     url: /project/
   - title: "Categories"
@@ -18,9 +20,9 @@ main:
   #   url: /sitemap/
 
 
-# study links
-study:
-  - title: "Hands-On"
+# ml links
+ml:
+  - title: "Hands-On ML"
     children:
       - title: "chap 04"
-        url: /study/
+        url: /ml/handsonml/4/

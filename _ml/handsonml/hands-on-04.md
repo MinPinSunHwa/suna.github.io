@@ -1,6 +1,6 @@
 ---
 title: "Hands-On Machine Learning chap 4"
-permalink: /study/
+permalink: /ml/handsonml/4/
 comments: true
 categories: [ML, HandsOn-ML]
 toc: true
