@@ -315,7 +315,9 @@ defaults:
       layout: single
       author_profile: true
       comments: true
-  # _study
+      sidebar:
+        nav: "study"
+  # _ml
   - scope:
       path: ""
       type: ml
