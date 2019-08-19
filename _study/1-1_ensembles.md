@@ -1,5 +1,5 @@
 ---
-title: "Ensemble 이란"
+title: "Ensembles 이란"
 permalink: /study/ensembles/1/
 comments: true
 categories: [ML]
@@ -13,10 +13,10 @@ toc: true
 
 ## Ensembles
 
-- 여러 머신러닝 기법을 하나의 예측 모델로 결합하는 메타 알고리즘이다.
-  - **Variance** 를 감소시키기 위해 *Bagging* 사용
-  - **Bias** 를 감소시키기 위해 *Boosting* 사용
-  - **predictions** 을 향상시키기 위해 *Stacking* 사용
+- 여러 머신러닝 모델을 하나의 예측 모델로 결합하는 알고리즘이다.
+  - **Variance** 를 감소시키기 위해 ***Bagging*** 사용
+  - **Bias** 를 감소시키기 위해 ***Boosting*** 사용
+  - **Predictions** 을 향상시키기 위해 ***Stacking*** 사용
 <br><br>
 
 - Sequential Ensembles
@@ -30,5 +30,5 @@ toc: true
   - 평균을 취함으로써 오류를 극단적으로 줄일 수 있기 때문에 base learners 사이의 독립성을 이용한다.
 <br><br>
 
-- 대부분의 Ensembles 기법은 같은 타입의 learners를 생성하여 Ensemble한다.
-- 다른 타입의 learners를 생성하여 Ensemble하는 경우, base learners가 최대한 정확하고 다양해야 한다.
+- 대부분의 Ensembles 기법은 같은 타입의 learners를 생성하여 Ensembles 한다.
+- 다른 타입의 learners를 생성하여 Ensembles 하는 경우, base learners가 최대한 정확하고 다양해야 한다.
