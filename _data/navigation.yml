@@ -26,3 +26,10 @@ ml:
     children:
       - title: "chap 04"
         url: /ml/handsonml/4/
+
+# study links
+study:
+  - title: "Ensembles"
+    children:
+      - title: "1. Ensemble 이란"
+        url: /study/ensenbles/1/
