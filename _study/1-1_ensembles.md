@@ -1,6 +1,6 @@
 ---
 title: "Ensemble 이란"
-permalink: /study/ensenbles/1/
+permalink: /study/ensembles/1/
 comments: true
 categories: [ML]
 toc: true

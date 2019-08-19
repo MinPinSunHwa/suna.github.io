@@ -1,7 +1,6 @@
 ---
-title: "study"
+title: "My Study"
 permalink: /study/
-toc: true
 ---
 
 ## Ensembles
