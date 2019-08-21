@@ -54,3 +54,5 @@ toc: true
 - 모델이 너무 복잡하고 parameter가 많으면 Bias는 작아지지만, 과대적합되어 Variance가 커질 수 있다.
 - 그래서 Bias와 Variance는 Tradeoff이다.
 - 모델이 데이터를 과적합하지 않으면서 충분한 복잡성을 갖도록 적절한 균형을 찾기 위해 노력해야 한다.
+
+![fig.3](../../images/ensembles_0_3.png)
