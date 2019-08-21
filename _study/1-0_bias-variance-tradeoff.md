@@ -26,7 +26,7 @@ toc: true
   - $$ Err(x) = E[(Y - \hat{f}\left(x\right))^2] $$ <br>
   - $$ Err(x) = (E[\hat{f}\left(x\right)] - f\left(x\right))^2 +
     E[(\hat{f}\left(x\right) - E[\hat{f}\left(x\right)])^2] + \sigma_e^2 $$ <br>
-  - $$ Err(x) = Bias^2 + Variance + Irreducible\ Error $$
+  - $$ Err(x) = Bias^2 + Variance + Irreducible\ Error $$ <br>
     - $$ Bias^2 = (E[\hat{f}\left(x\right)] - f\left(x\right))^2 $$ <br>
     - $$ Variance = E[(\hat{f}\left(x\right) - E[\hat{f}\left(x\right)])^2] $$
 <br><br>
