@@ -9,25 +9,24 @@ toc: true
 **Reference**
 
 - http://scott.fortmann-roe.com/docs/BiasVariance.html
-
 - http://www.machinelearningtutorial.net/2017/01/26/the-bias-variance-tradeoff/
 
 
 ## 1. Bias and Variance
 
-- Target과 관측 변수 간의 관계가 $$ \mathbf{Y} = f(\mathbf{X}) + \epsilon $$ 라고 가정하자.
+- Target 변수와 관측 변수 간의 관계가 $$ \mathbf{Y} = f(\mathbf{X}) + \epsilon $$ 라고 가정하자.
   - $$ \mathbf{Y} $$ : 예측하고자 하는 변수(Target)
   - $$ \mathbf{X} $$ : 관측 변수
-  - $$ \epsilon~\mathcal{N}(0,\sigma_\epsilon) $$ : 평균이 0인 정규분포를 따르는 오차
+  - $$ \epsilon\sim\mathcal{N}(0,\sigma_\epsilon) $$ : 평균이 0인 정규분포를 따르는 오차
   - $$ f(\mathbf{X}) $$ : $$ \mathbf{Y} $$ 값을 예측하는 함수
   - $$ \hat{f}(\mathbf{X}) $$ : 학습을 통해 $$ f(\mathbf{X}) $$를 추정하는 함수
 <br><br>
 
 - 어느 한 점 $$ x $$에서의 제곱 예측 오차
-  - $$ Err(x) = E[(Y - \hat{f}\left(x\right))^2] $$
+  - $$ Err(x) = E[(Y - \hat{f}\left(x\right))^2] $$ <br>
   - $$ Err(x) = (E[\hat{f}\left(x\right)] - f\left(x\right))^2 +
-    E[(\hat{f}\left(x\right) - E[\hat{f}\left(x\right)])^2] + \sigma_e^2 $$
-  - $$ Err(x) = Bias^2 + Variance + Irreducible Error $$
+    E[(\hat{f}\left(x\right) - E[\hat{f}\left(x\right)])^2] + \sigma_e^2 $$ <br>
+  - $$ Err(x) = Bias^2 + Variance + Irreducible\ Error $$
 <br><br>
 
 - Error due to **Bias**
