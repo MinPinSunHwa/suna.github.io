@@ -48,7 +48,7 @@ toc: true
 
 ## 2. Why is there a tradeoff?
 
-![fig.2](./images/ensembles_0_2.png)
+![fig.2](../../images/ensembles_0_2.png)
 
 - 모델이 너무 단순하고 parameter가 적으면 Variance가 적지만, 과소적합되어 Bias가 커질 수 있다.
 - 모델이 너무 복잡하고 parameter가 많으면 Bias는 작아지지만, 과대적합되어 Variance가 커질 수 있다.
