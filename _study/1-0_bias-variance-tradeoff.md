@@ -43,7 +43,7 @@ toc: true
   - 데이터의 잡음으로 인한 오차이다.
 <br><br>
 
-![fig.1](./images/ensembles_0_1.png)
+![fig.1](../../images/ensembles_0_1.png)
 <br><br>
 
 ## 2. Why is there a tradeoff?
