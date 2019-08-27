@@ -2,7 +2,7 @@
 title: "Bagging"
 permalink: /study/ensembles/2/
 comments: true
-categories: [ML]
+categories: [ML, Ensembles]
 toc: true
 ---
 
