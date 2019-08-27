@@ -3,7 +3,6 @@ title: "Bias Variance TradeOff"
 permalink: /study/ensembles/0/
 comments: true
 categories: [ML]
-toc: true
 ---
 
 **Reference**
