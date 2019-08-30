@@ -35,3 +35,5 @@ study:
         url: /study/ensembles/0/
       - title: "1. Ensembles 이란"
         url: /study/ensembles/1/
+      - title: "2. Bagging 이란"
+        url: /study/ensembles/2/
