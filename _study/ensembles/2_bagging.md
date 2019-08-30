@@ -34,3 +34,15 @@ toc: true
   - N개의 bootstrap sample 별로 만들어진 tree 모델들을 ensembles 한 것이다.
   - 랜덤성에 의해 tree들이 서로 조금씩 다르게 만들어 진다.
   - forest의 bias가 약간 증가하지만, 여러 tree의 평균 연산으로 노이즈에 대한 민감함이 감소했기때문에 variance는 감소된다.
+<br><br>
+
+- 특정 feature가 모델에 많은 영향을 줄 때, 모든 tree의 결과가 비슷하다.
+  - 대부분의 tree가 같은 feature를 사용하기 때문이다.
+  - 따라서, tree correlation이 높아진다 <br>
+    (bagging은 base learners간 상관관계를 고려하지 않다는 문제점을 가지고 있다).
+  - tree가 비슷하게 만들어지면, variance가 감소되지 않는다.
+<br><br>
+
+- tree correlation 문제를 해결하기 위해 데이터 sampling 시 feature도 random으로 선택한다.
+  - 모든 tree가 서로 다른 데이터셋과 feature로 학습하게 된다.
+  - 따라서, tree correlation이 줄어든다.
