@@ -10,11 +10,14 @@ toc: true
 
 - https://blog.statsbot.co/ensemble-learning-d1dcd548e936
 - https://ko.wikipedia.org/wiki/%EB%9E%9C%EB%8D%A4_%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8
+- https://swalloow.github.io/bagging-boosting
 <br><br>
 
 ## 1. Bagging
 
-- Bagging은 bootstrap의 집계를 의미한다.
+![fig.1](../images/ensembles_2_1.png)
+
+- Bagging은 여러 bootstrap으로 각 모델을 학습시켜 집계하는 방법이다.
   - bootstrap은 random sampling하여 만든 훈련 데이터셋의 서브셋이다(표본).
 <br><br>
 
@@ -28,7 +31,7 @@ toc: true
 
 ## 2. Random Forest
 
-![fig.1](../images/ensembles_2_1.png)
+![fig.2](../images/ensembles_2_2.png)
 
 - 주로 사용하는 bagging 모델로 Random Forest가 있다.
   - N개의 bootstrap sample 별로 만들어진 tree 모델들을 ensembles 한 것이다.
