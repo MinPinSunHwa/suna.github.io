@@ -39,7 +39,7 @@ toc: true
 
 | | Bagging | Boosting |
 |:-|:-------|:---------|
-| 학습 데이터 | random sampling | 가중치를 고려한 random sampling |
+| 학습 데이터 | random sampling | 가중치를 부여하여 random sampling |
 | 훈련 과정 | - 병렬로 모델 생성 <br> - 각 모델은 서로 독립적 | - 순차적으로 모델 생성 <br> - 각 훈련 단계에 가중치 계산 |
 | 예측 | 평균 or 다수결 <br> $$ e=\cfrac{1}{N}\sum_{i=1}^{N} e_i $$ | $$ e=\sum_{i=1}^{N} w_{i} e_{i} $$ <br> $$ e_i $$ : 각 learners의 결과, $$ w_i $$ : 각 learners의 가중치|
 | 목적 | Variance 감소 | Bias 감소 |
