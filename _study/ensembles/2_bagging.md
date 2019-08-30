@@ -19,7 +19,7 @@ toc: true
 <br><br>
 
 - Bagging의 한 가지 방법으로 estimate의 분산을 줄이기 위해 여러 estimate의 평균을 구하는 방법이 있다.
-  - $$ f(x) = \cfrac{1}{M} \mathlarger{\sum}_{m=1}^{M} f_m(x) $$ <br>
+  - $$ f(x) = \cfrac{1}{M} \sum\limits_{m=1}^{M} f_m(x) $$ <br>
   - 각 base learners 결과값을 집계하는데, 다음과 같이 집계한다.
     - classification의 경우, voting
     - regression의 경우, 평균
