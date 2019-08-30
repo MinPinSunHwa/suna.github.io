@@ -1,5 +1,5 @@
 ---
-title: "Bagging"
+title: "Bagging 이란"
 permalink: /study/ensembles/2/
 comments: true
 categories: [ML, Ensembles]
