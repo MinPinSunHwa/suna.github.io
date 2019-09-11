@@ -14,7 +14,7 @@ toc: true
 ## Boosting
 
 - boosting은 week learners를 strong learners로 만들어 나가는 알고리즘이다.
-  - week learners :
+  - week learners : 상대적으로 성능이 떨어지는 learners
 
 
 ## AdaBoost
