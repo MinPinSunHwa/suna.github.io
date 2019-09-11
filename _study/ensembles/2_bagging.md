@@ -49,3 +49,6 @@ toc: true
 - tree correlation 문제를 해결하기 위해 데이터 sampling 시 feature도 random으로 선택한다.
   - 모든 tree가 서로 다른 데이터셋과 feature로 학습하게 된다.
   - 따라서, tree correlation이 줄어든다.
+<br>
+
+## 3. Extra-Tree
