@@ -10,16 +10,17 @@ toc: true
 
 - https://blog.statsbot.co/ensemble-learning-d1dcd548e936
 - https://steemit.com/kr-dev/@steemonen1/adaboost
+- https://ko.wikipedia.org/wiki/%EC%97%90%EC%9D%B4%EB%8B%A4%EB%B6%80%EC%8A%A4%ED%8A%B8#cite_ref-1
 <br><br>
 
-## Boosting
+## 1. Boosting
 
 - boosting은 week learners를 조합하여 strong learners로 만들어 나가는 알고리즘이다.
   - week learners : 상대적으로 성능이 떨어지는 learners
   - strong learners : 상대적으로 좋은 성능을 발휘하는 learners
 
 
-## AdaBoost
+## 2. AdaBoost
 
 **Binary Classifier**
 
@@ -79,8 +80,8 @@ toc: true
   \end{cases} $$
 <br><br>
 
-## Gradient Boosting (GBM)
+## 3. Gradient Boosting (GBM)
 
-## XGBoost
+## 4. XGBoost
 
-## LightGBM
+## 5. LightGBM
