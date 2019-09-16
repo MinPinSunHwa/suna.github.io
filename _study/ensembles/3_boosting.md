@@ -9,6 +9,7 @@ toc: true
 **Reference**
 
 - https://blog.statsbot.co/ensemble-learning-d1dcd548e936
+- https://steemit.com/kr-dev/@steemonen1/adaboost
 <br><br>
 
 ## Boosting
@@ -28,7 +29,7 @@ toc: true
     - $$ N $$ : sample 수
 
   - 모든 데이터의 가중치 초기화 $$ \cdots(1) $$
-    - i번째 데이터의 가중치 $$ w_i $$ 초기화
+    - i번째 데이터의 가중치 $$ w_i^{(1)} $$ 초기화
     - $$ w_i^{(1)} =
       \begin{cases}
       \frac{1}{M}, & \mbox{if }y_i=+1\mbox{(positive)} \\
@@ -53,15 +54,21 @@ toc: true
       \ln \cfrac{1-\boldsymbol{\varepsilon}_t}{\boldsymbol{\varepsilon}_t} $$ <br>
 
   - 데이터의 가중치 계산 및 업데이트 $$ \cdots(5) $$
-    - i번째 데이터의 가중치 $$ w_i $$ 업데이트
+    - i번째 데이터의 가중치 $$ w_i^{(t)} $$ 업데이트
     - $$ w_i^{(t+1)} \leftarrow
       \begin{cases}
-      \cfrac{w_i^{(t)} e^{-\alpha_t}}{W}, & \mbox{if }\hat{f_t}(x_k)=y_k\ (\text{예측이 맞은 경우}) \\
-      \cfrac{w_i^{(t)} e^{\alpha_t}}{W}, & \mbox{if }\hat{f_t}(x_k)\ne y_k\ (\text{예측이 틀린 경우})
+      \cfrac{w_i^{(t)} e^{-\alpha_t}}{W}, & \mbox{if }\ \hat{f_t}(x_k)=y_k\ (\text{예측이 맞은 경우}) \\
+      \cfrac{w_i^{(t)} e^{\alpha_t}}{W}, & \mbox{if }\ \hat{f_t}(x_k)\ne y_k\ (\text{예측이 틀린 경우})
       \end{cases} $$ <br>
     - $$ W = \sum\limits_{k=1}^{N} w_k^{(t)} $$ <br>
 
-  - $$ (2)- (5) $$ 과정 $$ T $$번 반복
+  - $$ (2)-(5) $$ 과정 $$ T $$번 반복
+
+  - Output : $$ G(x) =
+    \begin{cases}
+    1, & \mbox{if }\ \sum\limits_{t=1}^{T} \alpha_t \hat{f_t}(x_k)=y_k \ge \sum\limits_{t=1}^{T} \alpha_t\\
+    0, & \mbox{if }\ otherwise
+    \end{cases} $$
 
 ## XGBoost
 
