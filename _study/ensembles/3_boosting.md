@@ -28,7 +28,8 @@ toc: true
     - $$ N $$ : sample 수
 
   - 모든 데이터의 가중치 초기화 $$ \cdots(1) $$
-    - i번째 데이터의 가중치 $$ w_i =
+    - i번째 데이터의 가중치 $$ w_i $$ 초기화
+    - $$ w_i =
       \begin{cases}
       \frac{1}{M}, & \mbox{if }y_i=+1\mbox{(positive)} \\
       \frac{1}{L}, & \mbox{if }y_i=-1\mbox{(negative)}
@@ -37,24 +38,28 @@ toc: true
     - $$ L $$ : negative sample의 수
 
   - 학습(모델 생성) $$ \cdots(2) $$
-    - $$ \hat{f_j}(x) $$: j번째 모델
+    - j번째 모델 $$ \hat{f_j}(x) $$
 
   - 모델의 오류 계산 $$ \cdots(3) $$
-    - j번째 모델의 오류 $$ \boldsymbol{\varepsilon}_j =
+    - j번째 모델의 오류 $$ \boldsymbol{\varepsilon}_j $$ 계산
+    - $$ \boldsymbol{\varepsilon}_j =
       \cfrac{\sum\limits_{\underset{\hat{f_j}(x_k)\ne y_k}{k=1}}^{N} w_k}
       {\sum\limits_{k=1}^{N} w_k} =
       \cfrac{\text{오류인 데이터의 가중치 합}}{\text{전체 학습 데이터의 가중치 합}} $$ <br>
 
   - 모델의 가중치 계산 $$ \cdots(4) $$
-    - j번째 모델의 가중치 $$ \alpha_j = \cfrac{1}{2}
+    - j번째 모델의 가중치 $$ \alpha_j $$ 계산
+    - $$ \alpha_j = \cfrac{1}{2}
       \ln \cfrac{1-\boldsymbol{\varepsilon}_j}{\boldsymbol{\varepsilon}_j} $$ <br>
 
-  - 데이터의 가중치 계산 $$ \cdots(5) $$
-    - i번째 데이터의 가중치 $$ w_i \leftarrow
+  - 데이터의 가중치 계산 및 업데이트 $$ \cdots(5) $$
+    - i번째 데이터의 가중치 $$ w_i $$ 업데이트
+    - $$ w_i \leftarrow
       \begin{cases}
-      \cfrac{w_i e^{-\alpha_j}}{\sum\limits_{k=1}^{N} w_k}, & \mbox{if }\hat{f_j}(x_k)=y_k \\
-      \cfrac{w_i e^{\alpha_j}}{\sum\limits_{k=1}^{N} w_k}, & \mbox{if }\hat{f_j}(x_k)\ne y_k
+      \cfrac{w_i e^{-\alpha_j}}{W}, & \mbox{if }\hat{f_j}(x_k)=y_k(\text{ 예측이 맞은 경우}) \\
+      \cfrac{w_i e^{\alpha_j}}{W}, & \mbox{if }\hat{f_j}(x_k)\ne y_k(\text{ 예측이 틀린 경우})
       \end{cases} $$ <br>
+    - $$ W = \sum\limits_{k=1}^{N} w_k $$
 
   - $$ (2)- (5) $$ 과정 $$ T $$번 반복
 
