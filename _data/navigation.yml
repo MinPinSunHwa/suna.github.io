@@ -37,3 +37,5 @@ study:
         url: /study/ensembles/1/
       - title: "2. Bagging 이란"
         url: /study/ensembles/2/
+        - title: "3. Boosting 이란"
+          url: /study/ensembles/3/
