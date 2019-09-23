@@ -50,7 +50,7 @@ toc: true
 
 - Cold Start Problem
   - User에게 Item을 추천하기 위해 많은 양의 기존 데이터가 요구된다.
-  - 새로운 User에게 어떤 Item을 추천해 주어야 할지 난감하다.
+  - 새로운 User에게 어떤 Item을 추천해 주어야 할지 고민해야 한다.
 <br><br>
 
 - Sparsity Problem
@@ -59,7 +59,7 @@ toc: true
 <br><br>
 
 - Information Utilization Problem
-  - 추천 시스템 구축에 활용하기 위한 데이터 및 정보를 올바르게 활용하기 위한 고민해야 한다.
+  - 추천 시스템 구축에 활용하기 위한 데이터 및 정보를 올바르게 활용하기 위해 고민해야 한다.
   - 대부분의 User는 Item을 눌러보고 다른 Item도 살펴본 뒤, 마음에 들면 장바구니에 넣고 구매하기도 하고 하지 않기도 한다(Implicit Score).
   - 구매가 완료되었지만, 이후 환불이나 교환이 일어날 수 있다(구매를 하였다고 Item에 대한 호감을 나타내는 것은 아니다).
   - 데이터를 올바르게 활용하기 위해 Explicit Score(영화 평점에 대한 rating 같은 점수)처럼 데이터를 Utilization하는 과정이 필요하다.
