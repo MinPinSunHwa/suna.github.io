@@ -2,7 +2,7 @@
 title: "추천 시스템 이란"
 permalink: /study/recommender_system/0/
 comments: true
-categories: [recommender]
+categories: [RecommenderSystem]
 toc: true
 ---
 
