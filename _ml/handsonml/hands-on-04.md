@@ -23,28 +23,27 @@ toc: true
 ## 4.1 선형 회귀
 
 - 선형 회귀 모델의 예측
-  - $$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$
+  - $$ \hat{y}=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} $$ <br>
   - $$ \hat{y} $$ : 예측값
   - $$ n $$ : 특성 수
   - $$ \theta_{0} $$ : 편향
 <br><br>
 
 - 선형 회귀 모델의 예측 (벡터 형태)
-  - $$ \hat{y}=h_\theta(\mathbf{x})=\theta^T\cdot\mathbf{x} $$
+  - $$ \hat{y}=h_\theta(\mathbf{x})=\theta^T\cdot\mathbf{x} $$ <br>
   - $$ h_\theta $$ : 가설함수
   - $$ \theta=[\theta_{0}\ \theta_{1}\ \cdots\ \theta_{n}]^T $$ : 모델의 파라미터 벡터 ($$ \theta_{0} $$ 포함)
   - $$ \mathbf{x}=[x_{0}\ x_{1}\ \cdots\ x_{n}]^T $$ : 특성 벡터 ($$ x_{0} $$는 항상 1)
 <br><br>
 
-- 모델을 훈련시킨다는 것은 모델이 훈련 세트에 가장 잘 맞도록 모델 파라미터를 설정하는 것이다.
-<br><br>
-
+- 모델을 훈련시킨다는 것은 훈련 세트에 가장 잘 맞는 모델 파라미터를 설정하는 것이다.
 - 먼저 모델이 훈련 데이터에 얼마나 잘 들어 맞는지 측정해야 한다.
   - 비용 함수를 최소화하는 $$ \theta $$를 찾아야 한다.
 <br><br>
 
 - 선형 회귀 모델의 MSE 비용 함수
-  - $$ MSE(\mathbf{X}, h_\theta)=\cfrac{1}{m}\sum_{i=1}^{m} (\theta^T\cdot\mathbf{x}^\left(i\right) - y^\left(i\right))^2 $$
+  - $$ MSE(\mathbf{X}, h_\theta)=
+    \cfrac{1}{m}\sum\limits_{i=1}^{m} (\theta^T\cdot\mathbf{x}^\left(i\right) - y^\left(i\right))^2 $$
 <br><br>
 
 - 비용 함수를 최소화하는 모델 파라미터의 조합을 파라미터 공간이라고 한다.
@@ -56,7 +55,7 @@ toc: true
 <br><br>
 
 - 정규방정식
-  - $$ \hat{\theta}=(\mathbf{X}^T\cdot\mathbf{X})^{-1}\cdot\mathbf{X}^T\cdot\mathbf{y} $$
+  - $$ \hat{\theta}=(\mathbf{X}^T\cdot\mathbf{X})^{-1}\cdot\mathbf{X}^T\cdot\mathbf{y} $$ <br>
   - $$ \hat{\theta} $$ : 비용 함수를 최소화하는 $$ \theta $$ 값
   - $$ \mathbf{y} $$ : 타깃벡터
 <br><br>
@@ -98,7 +97,7 @@ toc: true
 - 경사 하강법에는 두 가지 문제점이 있다. <br>
   ![4-6](../images/4-6.png)
   - 무작위 초기화 때문에 알고리즘이 왼쪽에서 시작하면 전역 최솟값보다 덜 좋은 지역 최솟값에 수렴한다.
-  - 알고리즘이 오른쪽에서 시작하 평탄한 지역을 지나기 위해 시간이 오래 걸리고 일찍 멈추게 되어 전역 최솟값에 도달하지 못한다.
+  - 알고리즘이 오른쪽에서 시작하면 평탄한 지역을 지나기 위해 시간이 오래 걸리고 일찍 멈추게 되어 전역 최솟값에 도달하지 못한다.
   - 다행히 선형 회귀를 위한 MSE 비용 함수는 볼록 함수이다.
     - 지역 최솟값이 없고, 하나의 전역 최솟값만 있다.
     - 연속 함수이고 기울기가 갑자기 변하지 않는다.
@@ -120,7 +119,7 @@ toc: true
 
 - 비용 함수의 편도함수
   - $$ \cfrac{\partial}{\partial \theta_j}MSE(\theta)=
-    \cfrac{2}{m} \sum_{i=1}^{m} (\theta^T \cdot \mathbf{x}^\left(i\right) - y^\left(i\right)) x_j^\left(i\right) $$
+    \cfrac{2}{m} \sum\limits_{i=1}^{m} (\theta^T \cdot \mathbf{x}^\left(i\right) - y^\left(i\right)) x_j^\left(i\right) $$
 <br><br>
 
 - 비용 함수의 그래디언트 벡터
@@ -143,7 +142,7 @@ toc: true
 
 - 경사 하강법의 스텝
   - 위로 향하는 그래디언트 벡터가 구해지면 반대 방향인 아래로 가야 한다.
-  - $$ \theta^\left({next\ step}\right)=\theta-\eta\nabla_{\theta}MSE(\theta) $$
+  - $$ \theta^\left({next\ step}\right)=\theta-\eta\nabla_{\theta}MSE(\theta) $$ <br>
   - $$ \eta $$ : 내려가는 스텝의 크기(learning rate)
 <br><br>
 
@@ -277,7 +276,7 @@ toc: true
 <br><br>
 
 - 릿지 회귀의 비용 함수
-  - $$ J(\theta) = MSE(\theta) + \alpha \cfrac{1}{2} \sum_{i=1}^{n} \theta_i^2 $$
+  - $$ J(\theta) = MSE(\theta) + \alpha \cfrac{1}{2} \sum_{i=1}^{n} \theta_i^2 $$ <br>
   - 하이퍼파라미터 $$ \alpha $$는 모델을 얼마나 많이 규지할지 조절한다.
     - $$ \alpha = 0 $$ 이면 선형 회귀와 같아진다.
     - $$ \alpha $$ 가 아주 크면 모든 가중치가 거의 0에 가까워지고 결국 데이터의 평균을 지나는 수평선이 된다.
@@ -301,7 +300,7 @@ toc: true
 
 - 라쏘 및 릿지 규제 <br>
   ![4-19](../images/4-19.png)
-  - 파란색 등고선은 규제가 없는($$ \alpha = 0 $$) MSE 비용 함수를 나타낸다.
+  - 왼쪽 위 그래프에서 배경의 등고선(타원형)은 규제가 없는($$ \alpha = 0 $$) MSE 비용 함수를 나타낸다.
   - 하얀색 원은 이 비용 함수에 대한 배치 경사 하강법의 경로이다.
   -
 
