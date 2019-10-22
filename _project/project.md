@@ -7,12 +7,12 @@ permalink: /project/
 
 ## 2019
 
-- (주)뉴럴비씨 [Trading Bot](trading_bot/trading_bot.pdf)
+- (주)뉴럴비씨 [Trading Bot](trading_bot/Trading_Bot.pdf)
 <br><br>
 ---
 ## 2018
 
-- (주)뉴럴비씨 [3PIKS](3piks/3piks.pdf)
+- (주)뉴럴비씨 [3PIKS](3piks/3PIKS.pdf)
 <br><br>
 
 - 개인 프로젝트 [Naver News](naver_news/naver_news.html)
