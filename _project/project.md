@@ -9,7 +9,9 @@ permalink: /project/
 
 - (주)뉴럴비씨 [Trading Bot](trading_bot/Trading_Bot.pdf)
 <br><br>
+
 ---
+
 ## 2018
 
 - (주)뉴럴비씨 [3PIKS](3piks/3PIKS.pdf)
