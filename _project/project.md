@@ -17,4 +17,5 @@ permalink: /project/
 - (주)뉴럴비씨 [3PIKS](3piks/3PIKS.pdf)
 <br><br>
 
-- 개인 프로젝트 [Naver News](naver_news/naver_news.html)
+- 개인 프로젝트 [Naver News Text Mining](naver_news/naver_news.html)
+  - 용량이 커 시간이 좀 걸립니다.
