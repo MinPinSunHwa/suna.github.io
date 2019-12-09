@@ -1,6 +1,6 @@
 ---
 title: "Bagging 이란"
-permalink: /study/ensembles/2/
+permalink: /ml/ensembles/2/
 comments: true
 categories: [ML, Ensembles]
 toc: true
@@ -8,9 +8,9 @@ toc: true
 
 **Reference**
 
-- https://blog.statsbot.co/ensemble-learning-d1dcd548e936
-- https://ko.wikipedia.org/wiki/%EB%9E%9C%EB%8D%A4_%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8
-- https://swalloow.github.io/bagging-boosting
+- [1](https://blog.statsbot.co/ensemble-learning-d1dcd548e936)
+- [2](https://ko.wikipedia.org/wiki/%EB%9E%9C%EB%8D%A4_%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8)
+- [3](https://swalloow.github.io/bagging-boosting)
 <br><br>
 
 ## 1. Bagging

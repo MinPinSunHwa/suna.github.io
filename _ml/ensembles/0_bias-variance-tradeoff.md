@@ -1,6 +1,6 @@
 ---
 title: "Bias Variance TradeOff"
-permalink: /study/ensembles/0/
+permalink: /ml/ensembles/0/
 comments: true
 categories: [ML]
 toc: true
@@ -8,8 +8,8 @@ toc: true
 
 **Reference**
 
-- http://scott.fortmann-roe.com/docs/BiasVariance.html
-- http://www.machinelearningtutorial.net/2017/01/26/the-bias-variance-tradeoff/
+- [1](http://scott.fortmann-roe.com/docs/BiasVariance.html)
+- [2](http://www.machinelearningtutorial.net/2017/01/26/the-bias-variance-tradeoff/)
 <br><br>
 
 ## 1. Bias and Variance

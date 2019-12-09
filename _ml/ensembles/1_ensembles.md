@@ -1,6 +1,6 @@
 ---
 title: "Ensembles 이란"
-permalink: /study/ensembles/1/
+permalink: /ml/ensembles/1/
 comments: true
 categories: [ML]
 toc: true
@@ -8,8 +8,8 @@ toc: true
 
 **Reference**
 
-- https://blog.statsbot.co/ensemble-learning-d1dcd548e936
-- https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/
+- [1](https://blog.statsbot.co/ensemble-learning-d1dcd548e936)
+- [2](https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/)
 <br><br>
 
 ## 1. Ensembles

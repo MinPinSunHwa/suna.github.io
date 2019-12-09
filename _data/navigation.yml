@@ -22,24 +22,24 @@ main:
 
 # ml links
 ml:
-  - title: "Hands-On ML"
-    children:
-      - title: "chap 04"
-        url: /ml/handsonml/4/
-
-# study links
-study:
+  - title: "Machine Learning"
   - title: "Ensembles"
     children:
       - title: "0. Bias Variance TradeOff"
-        url: /study/ensembles/0/
+        url: /ml/ensembles/0/
       - title: "1. Ensembles 이란"
-        url: /study/ensembles/1/
+        url: /ml/ensembles/1/
       - title: "2. Bagging 이란"
-        url: /study/ensembles/2/
+        url: /ml/ensembles/2/
       - title: "3. Boosting 이란"
-        url: /study/ensembles/3/
+        url: /ml/ensembles/3/
+  - title: "Deep Learning"
+
+# study links
+study:
   - title: "Recommender System"
     children:
       - title: "0. Recommender System 이란"
         url: /study/recommender_system/0/
+  - title: "Embedding"
+  - title: "Spark"

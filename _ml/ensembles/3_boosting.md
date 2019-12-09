@@ -1,6 +1,6 @@
 ---
 title: "Boosting 이란"
-permalink: /study/ensembles/3/
+permalink: /ml/ensembles/3/
 comments: true
 categories: [ML, Ensembles]
 toc: true
@@ -8,9 +8,9 @@ toc: true
 
 **Reference**
 
-- https://blog.statsbot.co/ensemble-learning-d1dcd548e936
-- https://steemit.com/kr-dev/@steemonen1/adaboost
-- https://ko.wikipedia.org/wiki/%EC%97%90%EC%9D%B4%EB%8B%A4%EB%B6%80%EC%8A%A4%ED%8A%B8#cite_ref-1
+- [1](https://blog.statsbot.co/ensemble-learning-d1dcd548e936)
+- [2](https://steemit.com/kr-dev/@steemonen1/adaboost)
+- [3](https://ko.wikipedia.org/wiki/%EC%97%90%EC%9D%B4%EB%8B%A4%EB%B6%80%EC%8A%A4%ED%8A%B8#cite_ref-1)
 <br><br>
 
 ## 1. Boosting
@@ -31,7 +31,7 @@ toc: true
   - $$ N $$ : sample 수
 <br><br>
 
-- 모든 데이터의 가중치 초기화 $$ \cdots(1) $$
+- 모든 데이터의 가중치 초기화
   - i번째 데이터의 가중치 $$ w_i^{(1)} $$ 초기화
   - $$ w_i^{(1)} =
     \begin{cases}
@@ -42,11 +42,11 @@ toc: true
   - $$ L $$ : negative sample의 수
 <br><br>
 
-- 학습(모델 생성) $$ \cdots(2) $$
+- 학습(모델 생성) $$ \cdots(1) $$
   - t번째 모델 $$ \hat{f_t}(x) $$
 <br><br>
 
-- 모델의 오류 계산 $$ \cdots(3) $$
+- 모델의 오류 계산 $$ \cdots(2) $$
   - t번째 모델의 오류 $$ \boldsymbol{\varepsilon}_t $$ 계산
   - $$ \boldsymbol{\varepsilon}_t =
     \cfrac{\sum\limits_{\underset{\hat{f_t}(x_k)\ne y_k}{k=1}}^{N} w_k}
@@ -54,13 +54,13 @@ toc: true
     \cfrac{\text{오류인 데이터의 가중치 합}}{\text{전체 학습 데이터의 가중치 합}} $$ <br>
 <br><br>
 
-- 모델의 가중치 계산 $$ \cdots(4) $$
+- 모델의 가중치 계산 $$ \cdots(3) $$
   - t번째 모델의 가중치 $$ \alpha_t $$ 계산
   - $$ \alpha_t = \cfrac{1}{2}
     \ln \cfrac{1-\boldsymbol{\varepsilon}_t}{\boldsymbol{\varepsilon}_t} $$ <br>
 <br><br>
 
-- 데이터의 가중치 계산 및 업데이트 $$ \cdots(5) $$
+- 데이터의 가중치 계산 및 업데이트 $$ \cdots(4) $$
   - i번째 데이터의 가중치 $$ w_i^{(t)} $$ 업데이트
   - $$ w_i^{(t+1)} \leftarrow
     \begin{cases}
@@ -70,7 +70,7 @@ toc: true
   - $$ W = \sum\limits_{k=1}^{N} w_k^{(t)} $$ <br>
 <br><br>
 
-- $$ (2)-(5) $$ 과정 $$ T $$번 반복
+- $$ (1)-(4) $$ 과정 $$ T $$번 반복
 <br><br>
 
 - Output : $$ G(x) =
