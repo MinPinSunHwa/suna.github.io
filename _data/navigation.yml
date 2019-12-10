@@ -23,6 +23,9 @@ main:
 # ml links
 ml:
   - title: "Machine Learning"
+    children:
+      - title: "0. 머신러닝이란"
+        url: /ml/machine_learning/0/
   - title: "Ensembles"
     children:
       - title: "0. Bias Variance TradeOff"
