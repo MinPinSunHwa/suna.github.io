@@ -37,6 +37,10 @@ ml:
       - title: "3. Boosting 이란"
         url: /ml/ensembles/3/
   - title: "Deep Learning"
+  - title: "PRML"
+    children:
+      - title: "1. 소개"
+      - url: /ml/prml/1-0/
 
 # study links
 study:
