@@ -40,7 +40,7 @@ ml:
   - title: "PRML"
     children:
       - title: "1. 소개"
-      - url: /ml/prml/1_0/
+        url: /ml/prml/1-0/
 
 
 # study links
