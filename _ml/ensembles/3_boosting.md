@@ -15,8 +15,8 @@ toc: true
 
 ## 1. Boosting
 
-- boosting은 week learners를 조합하여 strong learners로 만들어 나가는 알고리즘이다.
-  - week learners : 상대적으로 성능이 떨어지는 learners
+- boosting은 weak learners를 조합하여 strong learners로 만들어 나가는 알고리즘이다.
+  - weak learners : 상대적으로 성능이 떨어지는 learners
   - strong learners : 상대적으로 좋은 성능을 발휘하는 learners
 
 
@@ -32,7 +32,7 @@ toc: true
 <br><br>
 
 - 모든 데이터의 가중치 초기화
-  - i번째 데이터의 가중치 $$ w_i^{(1)} $$ 초기화
+  - $$ i $$번째 데이터의 가중치 $$ w_i^{(1)} $$ 초기화
   - $$ w_i^{(1)} =
     \begin{cases}
     \frac{1}{M}, & \mbox{if }\ y_i=+1\mbox{(positive)} \\
@@ -43,11 +43,11 @@ toc: true
 <br><br>
 
 - 학습(모델 생성) $$ \cdots(1) $$
-  - t번째 모델 $$ \hat{f_t}(x) $$
+  - $$ t $$번째 모델 $$ \hat{f_t}(x) $$
 <br><br>
 
 - 모델의 오류 계산 $$ \cdots(2) $$
-  - t번째 모델의 오류 $$ \boldsymbol{\varepsilon}_t $$ 계산
+  - $$ t $$번째 모델의 오류 $$ \boldsymbol{\varepsilon}_t $$ 계산
   - $$ \boldsymbol{\varepsilon}_t =
     \cfrac{\sum\limits_{\underset{\hat{f_t}(x_k)\ne y_k}{k=1}}^{N} w_k}
     {\sum\limits_{k=1}^{N} w_k} =
@@ -55,13 +55,13 @@ toc: true
 <br><br>
 
 - 모델의 가중치 계산 $$ \cdots(3) $$
-  - t번째 모델의 가중치 $$ \alpha_t $$ 계산
+  - $$ t $$번째 모델의 가중치 $$ \alpha_t $$ 계산
   - $$ \alpha_t = \cfrac{1}{2}
     \ln \cfrac{1-\boldsymbol{\varepsilon}_t}{\boldsymbol{\varepsilon}_t} $$ <br>
 <br><br>
 
 - 데이터의 가중치 계산 및 업데이트 $$ \cdots(4) $$
-  - i번째 데이터의 가중치 $$ w_i^{(t)} $$ 업데이트
+  - $$ i $$번째 데이터의 가중치 $$ w_i^{(t)} $$ 업데이트
   - $$ w_i^{(t+1)} \leftarrow
     \begin{cases}
     \cfrac{w_i^{(t)} e^{-\alpha_t}}{W}, & \mbox{if }\ \hat{f_t}(x_k)=y_k\ (\text{예측이 맞은 경우}) \\
