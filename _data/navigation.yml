@@ -41,6 +41,8 @@ ml:
     children:
       - title: "1. 소개"
         url: /ml/prml/1-0/
+      - title: "1.1 예시: 다항식 곡선 피팅"
+        url: /ml/prml/1-1/
 
 
 # study links
