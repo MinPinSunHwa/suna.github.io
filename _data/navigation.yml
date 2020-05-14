@@ -54,8 +54,10 @@ study:
   - title: "Embedding"
   - title: "Docker"
     children:
-        - title: "- 도커(Docker)란"
-          url: /study/docker/0/
+      - title: "- 도커(Docker)란"
+        url: /study/docker/0/
+      - title: "- 도커 이미지와 도커 컨테이너"
+        url: /study/docker/1/
   - title: "Spark"
     children:
       - title: "0. 하둡(Hadoop)과 스파크(Spark)"
