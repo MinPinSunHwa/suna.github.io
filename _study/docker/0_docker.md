@@ -138,7 +138,7 @@ toc: true
 
 **예시**
 
-- `helloworld` 쉘 스크립트
+[ `helloworld` ] 쉘 스크립트
 
 ```
 #!/bin/sh
@@ -147,7 +147,7 @@ echo "Hello, World!"
 ```
 
 
-- `Dockerfile`
+[ `Dockerfile` ]
 
 ```
 FROM ubuntu:16.04
@@ -181,7 +181,7 @@ CMD ["helloworld"]
 
 **1. 애플리케이션 만들기**
 
-- `main.go`
+[ `main.go` ]
 
 ```go
 package main
@@ -210,6 +210,8 @@ func main() {
 
 **2. `Dokerfile` 만들기**
 
+[ `Dokerfile` ]
+
 ```
 FROM golang:1.9
 
@@ -228,5 +230,5 @@ docker image build -t example/echo:latest .
 **4. 도커 컨테이너 실행**
 
 ```
-docker container run example.echo:latest
+docker container run example/echo:latest
 ```
