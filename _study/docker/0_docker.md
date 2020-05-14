@@ -7,7 +7,9 @@ toc: true
 ---
 
 **Reference**
-- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 | 야마다 아키노리 지음 | 심효섭 옯김
+
+- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 , 야마다 아키노리 지음 , 심효섭 옯김
+<br><br>
 
 ---
 
@@ -72,7 +74,7 @@ toc: true
 
 **도커 사용의 의의**
 
-1. 환경 차이로 인한 문제 방지
+1\. 환경 차이로 인한 문제 방지
 
 - 애플리케이션은 항상 뭔가에 의존함
   - 운영 체제는 물론이고, CPU나 메모리 같은 컴퓨터 리소스, 언어 런타임, 라이브러리, 별도 프로세스로 애플리케이션 내부적으로 실행하는 애플리케이션 등 다양한 요소에 의존성을 가질 수 있음
@@ -93,7 +95,7 @@ toc: true
   - 생성해 둔 도커 이미지는 도커가 설치된 머신이라면 어디서든 실행 가능
 <br><br>
 
-2. 애플리케이션 구성 관리의 용이성
+2\. 애플리케이션 구성 관리의 용이성
 
 - 일정 규모를 넘는 시스템은 주로 여러 개의 애플리케이션과 미들웨어를 조합하는 형태로 구성 <br>
   (도커를 사용함으로써 배포 작업은 매우 쉬워졌지만, 복잡한 시스템을 한 덩어리로 동작하긴 쉽지 않음) <br>
@@ -104,7 +106,7 @@ toc: true
 - 여러 컨테이너를 사용하는 애플리케이션을 쉽게 관리할 수 있도록 도커 컴포즈(Docker Compose) 도구 제공
   - yaml 포맷으로 작성된 설정 파일로 컨테이너를 정의하거나 컨테이너 간의 의존 관계를 정의해 시작 순서 제어
   - 도커와 도커 컴포즈를 통해 여러 애플리케이션과 미들웨어의 의존관계를 간결한 코드로 관리 가능
-  - 예시
+  - **예시**
 
     ```
     version: "3"
@@ -170,4 +172,61 @@ CMD ["helloworld"]
 - `CMD` 인스트럭션
   - 도커 컨테이너를 실행할 때 컨테이너 안에서 실행할 프로세스 지정
   - `RUN` 인스트럭션은 이미지를 빌드할 때 실행되고 `CMD` 인스트럭션은 컨테이너를 시작할 때 한번 실행됨
-    -`RUN`은 애플리케이션 업데이트 및 배치에, `CMD`는 애플리케이션 자체를 실행하는 명령
+    - `RUN`은 애플리케이션 업데이트 및 배치에, `CMD`는 애플리케이션 자체를 실행하는 명령
+<br><br>
+
+---
+
+# Example
+
+**1. 애플리케이션 만들기**
+
+- `main.go`
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    "net/http"
+)
+
+func main() {
+    http.HandleFunc("/", func(w http.ResponseWriter, r * http.Request){
+        log.Println("received request")
+        fmt.Fprintf(w, "Hello Docker!!")
+    })
+
+    log.Println("start server")
+    server: = & http.Server {
+        Addr: ":8080"
+    }
+    if err: = server.ListenAndServer(); err != nil {
+        log.Println(err)
+    }
+}
+```
+
+**2. `Dokerfile` 만들기**
+
+```
+FROM golang:1.9
+
+RUN mkdir /echo
+COPY main.go /echo
+
+CMD ["go", "run", "/echo/main.go"]
+```
+
+**3. 도커 이미지 빌드**
+
+```
+docker image build -t example/echo:latest .
+```
+
+**4. 도커 컨테이너 실행**
+
+```
+docker container run example.echo:latest
+```
