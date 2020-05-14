@@ -62,9 +62,6 @@ toc: true
   ![fig.1](../images/0-2.png)
 <br><br>
 
-- 조작 간편
-<br><br>
-
 **도커 사용의 예**
 
 - 설치가 번거로운 명령형 도구를 도커 컨테이너로 가져다 사용함으로써 호스트를 깔끔하게 유지하면서도 바로 실행할 수 있음
@@ -224,11 +221,11 @@ CMD ["go", "run", "/echo/main.go"]
 **3. 도커 이미지 빌드**
 
 ```
-docker image build -t example/echo:latest .
+$ docker image build -t example/echo:latest .
 ```
 
 **4. 도커 컨테이너 실행**
 
 ```
-docker container run example/echo:latest
+$ docker container run example/echo:latest
 ```
