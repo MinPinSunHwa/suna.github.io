@@ -13,6 +13,16 @@ $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
+$code-background-color: #f1e8cd !default;
+
+// $success-color: #3fa63f !default;
+// $warning-color: #d67f05 !default;
+// $danger-color: #ee5f5b !default;
+// $info-color: #3b9cba !default;
+// $focus-color: $primary-color !default;
+// $active-color: mix(#fff, $primary-color, 80%) !default;
+//
+
 /* contrast syntax highlighting (base16) */
 $base00: #f1e8cd !default; // #000000 !default;
 $base01: #a98f80 !default; // #242422 !default;
