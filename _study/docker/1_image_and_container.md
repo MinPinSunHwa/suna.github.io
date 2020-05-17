@@ -30,3 +30,11 @@ toc: true
 ```
 docker image build -t 이지미명[:태그명] Dockerfile_경로
 ```
+
+- `Dockerfile`이 현재 작업 디렉터리에 있다면 `.`을 입력함
+
+  ```
+  $ docker image build -t example/echo:latest .
+  ```
+
+- `f` 옵션
