@@ -14,7 +14,7 @@ toc: true
 
 ---
 
-### `JavaScript` is ...
+## `JavaScript`
 
 - 웹 브라우저에서 실행되는 스크립트 언어
 
@@ -29,7 +29,7 @@ toc: true
 
 ---
 
-### `V8` is ...
+## `V8`
 
 - 구글에 의해 `C++`로 개발된 오픈 소스 자바스크립트 엔진
 
@@ -45,7 +45,7 @@ toc: true
 
 ---
 
-### `Node.js` is ...
+## `Node.js`
 
 - `V8`을 이용하여 `JavaScript`의 강력함과 단순함을 활용한 이벤트 기반의 논블록킹 I/O를 주 컨셉으로 만든 백엔드(Back-end) `JavaScript` 기반 플랫폼
   - `V8` 기반으로 만들어져 빠르고 확장 가능한 네트워크 프로그램 쉽게 작성 가능
@@ -63,8 +63,68 @@ toc: true
 
 <br><br>
 
+- `Node.js` 아케텍쳐 <br><br>
+  ![fig.1](../images/0-1.png)
+<br><br>
+
 ---
 
-### `Node.js`의 아키텍처 및 동작 원리
+## Node REPL
 
-![fig.1](../images/0-1.png)
+- Node REPL(Read-Evaluate-Print-Loop) 실행 화면 <br><br>
+![fig.1](../images/0-2.png)
+
+- `Node.js`는 `Perl`, `Python`, `Ruby` 등과 같이 그 자체가 서버이며 실행 환경을 제공하고 있음
+- Node REPL을 통해 작성한 `JavaScript` 코드는 직접 돌려보며 테스트 수행 가능
+- Node REPL은 `Node.js`를 이해하는 데 훌륭한 개발 환경 제공
+- 가장 선호하는 텍스트 에디터와 연결하여 코딩 및 실행 환경 구축 가능
+- Node REPL의 모든 명령어는 `.`으로 시작함
+  - `.beak` : 현재 구동 중인 작업을 종료하고 대기 상태로 변경
+  - `.clear` : 현재 context 초기화, `Node.js`를 재실행하지 않더라도 사용 중이었던 모든 변수 및 클로져 등을 깨끗이 정리해줌
+  - `.exit` : Node REPL 종료
+  - `.help` : 도움말 메뉴 출력
+  - `.load` : js 파일을 REPL 세션으로 적재
+  - `.save` : 현재 수행 중인 REPL 세션에서 실행하였던 모든 명령어들을 파일로 저장
+<br><br>
+
+---
+
+## NPM
+
+- `Node.js`의 큰 장점 중 하나는 기능을 확장한 수많은 모듈들이 존재하고, 쉽게 다운로드 및 설치 가능
+  - 모듈 설치를 위해 NPM(Node Package Manager)의 이해 및 활용 필요
+- NPM은 `Node.js`의 자바스크립트 플랫폼 관리를 위한 주체
+  - 모듈의 의존성 충돌 관련 문제를 깔끔하게 해결해줌
+- NPM은 크게 세 가지 기능을 함
+  - 서드파티 패키지 중앙 저장소
+  - 설치된 패키지 관리 수단
+  - 다른 패키지에 있는 의존성을 정의하는 표준
+- `npm`으로 설치한 모든 모듈은 `package.json` 파일에 타 모듈과의 의존성 및 설치를 위한 정보들이 기술되어 있음
+<br><br>
+
+**모듈 설치 방법**
+
+- `Node.js`가 설치된 경로로 이동 후, `npm` 사용
+  - `Node.js`가 설치된 경로의 파일 목록들 <br><br>
+    ![fig.1](../images/0-3.png)
+  - `npm` 명령어 사용
+
+    npm install {module_name}
+    {: .notice--info}
+
+**예시**
+
+```
+$ npm install express
+```
+
+
+**참고** <br>
+<`Node.js` 모듈의 로컬 설치와 글로벌 설치> <br>
+위의 방식은 로컬 설치 방식으로, 설치하고자 하는 위치에서만 설치가 가능하다.
+만약 어떤 사용자다 어떤 위치에서도 사용 가능하게 설치하고 싶다면 글로벌 설치 방식을 선책해야 한다.
+방법은 간단하다. `-g` 플래그를 추가하면 된다. <br><br>
+```
+$ npm install -g express
+```
+{: .notice--success}
