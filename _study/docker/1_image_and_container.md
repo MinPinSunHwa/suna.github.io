@@ -8,12 +8,14 @@ toc: true
 
 **Reference**
 
-- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 , 야마다 아키노리 지음 , 심효섭 옯김
+- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문
+  - 야마다 아키노리 지음
+  - 심효섭 옯김
 <br><br>
 
 ---
 
-# Docker Image is ...
+## Docker Image is ...
 
 - 도커 컨테이너를 만들기 위한 **템플릿**
 
@@ -25,11 +27,10 @@ toc: true
 
 ---
 
-# Docker Image Build ...
+### Docker Image Build ...
 
-```
 docker image build -t 이지미명[:태그명] Dockerfile_경로
-```
+{: .notice--info}
 
 - `Dockerfile`이 현재 작업 디렉터리에 있다면 `.`을 입력함
 
