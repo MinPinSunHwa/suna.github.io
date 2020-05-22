@@ -14,7 +14,7 @@ toc: true
 
 ---
 
-## `JavaScript`
+# `JavaScript`
 
 - 웹 브라우저에서 실행되는 스크립트 언어
 
@@ -29,7 +29,7 @@ toc: true
 
 ---
 
-## `V8`
+# `V8`
 
 - 구글에 의해 `C++`로 개발된 오픈 소스 자바스크립트 엔진
 
@@ -45,7 +45,7 @@ toc: true
 
 ---
 
-## `Node.js`
+# `Node.js`
 
 - `V8`을 이용하여 `JavaScript`의 강력함과 단순함을 활용한 이벤트 기반의 논블록킹 I/O를 주 컨셉으로 만든 백엔드(Back-end) `JavaScript` 기반 플랫폼
   - `V8` 기반으로 만들어져 빠르고 확장 가능한 네트워크 프로그램 쉽게 작성 가능
@@ -61,7 +61,6 @@ toc: true
 카운터 종업원은 [주문자가 커피를 주문했다]는 이벤트, [커피 준비가 완료되었다]는 두가지 이벤트를 받았다. 종업원은 해당 이벤트가 발생했을 때 본인이 해야 할 일을 했다. 이것이 **이벤트 주도**이다. 여기서 호출기는 [커피 준비가 완료되었다]고 알려줬다. 이를 **이벤트 콜백**(Event Callback)이라고 한다.
 {: .notice--success}
 
-<br><br>
 
 - `Node.js` 아케텍쳐 <br><br>
   ![fig.1](../images/0-1.png)
@@ -69,7 +68,7 @@ toc: true
 
 ---
 
-## Node REPL
+# Node REPL
 
 - Node REPL(Read-Evaluate-Print-Loop) 실행 화면 <br><br>
 ![fig.1](../images/0-2.png)
@@ -89,7 +88,7 @@ toc: true
 
 ---
 
-## NPM
+# NPM
 
 - `Node.js`의 큰 장점 중 하나는 기능을 확장한 수많은 모듈들이 존재하고, 쉽게 다운로드 및 설치 가능
   - 모듈 설치를 위해 NPM(Node Package Manager)의 이해 및 활용 필요
@@ -124,7 +123,8 @@ $ npm install express
 위의 방식은 로컬 설치 방식으로, 설치하고자 하는 위치에서만 설치가 가능하다.
 만약 어떤 사용자다 어떤 위치에서도 사용 가능하게 설치하고 싶다면 글로벌 설치 방식을 선책해야 한다.
 방법은 간단하다. `-g` 플래그를 추가하면 된다. <br><br>
+{: .notice--success}
+
 ```
 $ npm install -g express
 ```
-{: .notice--success}
