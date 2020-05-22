@@ -14,7 +14,7 @@ toc: true
 
 ---
 
-# `JavaScript`
+# 1. `JavaScript`
 
 - 웹 브라우저에서 실행되는 스크립트 언어
 
@@ -29,7 +29,7 @@ toc: true
 
 ---
 
-# `V8`
+# 2. `V8`
 
 - 구글에 의해 `C++`로 개발된 오픈 소스 자바스크립트 엔진
 
@@ -45,7 +45,7 @@ toc: true
 
 ---
 
-# `Node.js`
+# 3. `Node.js`
 
 - `V8`을 이용하여 `JavaScript`의 강력함과 단순함을 활용한 이벤트 기반의 논블록킹 I/O를 주 컨셉으로 만든 백엔드(Back-end) `JavaScript` 기반 플랫폼
   - `V8` 기반으로 만들어져 빠르고 확장 가능한 네트워크 프로그램 쉽게 작성 가능
@@ -68,7 +68,7 @@ toc: true
 
 ---
 
-# Node REPL
+# 4. Node REPL
 
 - Node REPL(Read-Evaluate-Print-Loop) 실행 화면 <br><br>
 ![fig.1](../images/0-2.png)
@@ -88,7 +88,7 @@ toc: true
 
 ---
 
-# NPM
+# 5. NPM
 
 - `Node.js`의 큰 장점 중 하나는 기능을 확장한 수많은 모듈들이 존재하고, 쉽게 다운로드 및 설치 가능
   - 모듈 설치를 위해 NPM(Node Package Manager)의 이해 및 활용 필요
