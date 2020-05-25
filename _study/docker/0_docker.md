@@ -10,7 +10,7 @@ toc: true
 
 - 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문
   - 야마다 아키노리 지음
-  - 심효섭 옯김
+  - 심효섭 옮김
 - [Docker for Windows 설치 및 문제 해결](https://blog.gaerae.com/2019/04/docker-for-windows-troubleshooting.html)
 - [Docker 예제(Python)](https://senticoding.tistory.com/50)
 <br><br>
