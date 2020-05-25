@@ -31,7 +31,7 @@ toc: true
 
 - `Dockerfile`에 기술된 구성을 따라 도커 이미지를 생성하는 명령어
 
-docker image build -t 이지미명[:태그명] Dockerfile_경로
+docker image build -t 이미지명[:태그명] Dockerfile_경로
 {: .notice--info}
 
 - `Dockerfile`이 현재 작업 디렉터리에 있다면 `.`을 입력함
@@ -56,7 +56,6 @@ docker image build -t 이지미명[:태그명] Dockerfile_경로
     $ docker image build --pull=true -t example/echo:latest .
     ```
 
-<br><br>
 
 **2) `docker search`**
 
@@ -69,7 +68,6 @@ docker search [options] 검색_키워드
 $ docker search --limit 5 mysql
 ```
 
-<br><br>
 
 **3) `docker image pull`**
 
@@ -82,3 +80,22 @@ docker image pull [options] 리포지토리명[:태그명]
 ```
 $ docker image pull jenkins:latest
 ```
+
+
+**4) `docker image ls`**
+
+- 현재 호스트 운영 체제에 저장된 도커 이미지의 목록을 보여주는 명령어
+  - 여기서 말하는 호스트 운영 체제는 도커 데몬이 동작하는 호스트 환경을 말함
+  - `docker image pull` 명령으로 원격 도커 레지스트리에서 내려받은 이미지는 물론이고 `docker image build` 명령을 실행하여 내려받은 이미지도 호스트 운영 체제에 저장됨
+- [IMAGE ID]는 이미지에 대한 식별자이고, 컨테이너를 구분하기 위한 [CONTAINER ID]와는 별개
+  - 즉, 이미지와 컨테이너는 별도로 관리
+
+docker image ls [options] 리포지토리[:태그]
+{: .notice--info}
+
+```
+$ docker image ls
+```
+
+
+**5) `docker image tag`**
