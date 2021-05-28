@@ -66,3 +66,7 @@ study:
     children:
       - title: "- Node.js란"
         url: /study/nodejs/0/
+  - title: "DJango"
+    children:
+      - title: "- "
+        url: /study/django/3/
