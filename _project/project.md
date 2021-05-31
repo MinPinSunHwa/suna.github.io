@@ -3,7 +3,8 @@ title: "My Project"
 permalink: /project/
 ---
 
-**Project** of FlowerSuNa
+**Project** of FlowerSuNa <br>
+
 프로젝트를 클릭하시면 포트폴리오를 보실 수 있습니다:)
 
 ## 2021
